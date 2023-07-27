@@ -25,6 +25,8 @@ const logincheck = check('email').custom(async (value, {req}) => {
     if(!validpassword){
         throw new Error('Wrong email or password')
     }
+
+    req.user = user.rows[0]
 })
 
 module.exports = {
