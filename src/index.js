@@ -2,7 +2,8 @@ const express = require('express');
 
 const app = express()
 const PORT = 8000;
-
+//middleware
+app.use(express.json())
 //import routes
 const authroutes = require('./routes/auth')
 
